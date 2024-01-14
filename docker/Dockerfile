@@ -10,5 +10,5 @@ RUN \
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-EXPOSE 3333
+EXPOSE 3000
 ENTRYPOINT ["sh", "/entrypoint.sh"]
