@@ -6,16 +6,16 @@ services:
       dockerfile: Dockerfile.compose
     entrypoint: /compose-entrypoint.sh
     ports:
-      - '3000:3000'
+      - '3333:3000'
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_started
     environment:
-      - HOST=localhost
+      - HOST=auto.vitalnetix.com
       - PROTOCOL=http
-      - PORT=3000
+      - PORT=3333
       - APP_ENV=production
       - REDIS_HOST=redis
       - POSTGRES_HOST=postgres
