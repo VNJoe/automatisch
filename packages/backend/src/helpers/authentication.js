@@ -20,11 +20,20 @@ export const isAuthenticated = async (_parent, _args, req) => {
       .withGraphFetched({
         role: true,
         permissions: true,
-      });
+      })
+      .throwIfNotFound();
 
     return true;
   } catch (error) {
     return false;
+  }
+};
+
+export const authenticateUser = async (request, response, next) => {
+  if (await isAuthenticated(null, null, request)) {
+    next();
+  } else {
+    return response.status(401).end();
   }
 };
 
@@ -33,11 +42,6 @@ const isAuthenticatedRule = rule()(isAuthenticated);
 export const authenticationRules = {
   Query: {
     '*': isAuthenticatedRule,
-    getAutomatischInfo: allow,
-    getConfig: allow,
-    getNotifications: allow,
-    healthcheck: allow,
-    listSamlAuthProviders: allow,
   },
   Mutation: {
     '*': isAuthenticatedRule,
