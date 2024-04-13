@@ -58,6 +58,8 @@ services:
       - POSTGRES_DB=automatisch
       - POSTGRES_USER=automatisch_user
       - POSTGRES_PASSWORD=automatisch_password
+    networks:
+      net132:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
