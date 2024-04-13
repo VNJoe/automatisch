@@ -49,7 +49,6 @@ function TestSubstep(props) {
   const [executeFlow, { data, error, loading, called, reset }] = useMutation(
     EXECUTE_FLOW,
     {
-      refetchQueries: ['GetStepWithTestExecutions'],
       context: { autoSnackbar: false },
     },
   );
@@ -83,9 +82,9 @@ function TestSubstep(props) {
     });
 
     await queryClient.invalidateQueries({
-      queryKey: ['flow', flowId],
+      queryKey: ['flows', flowId],
     });
-  }, [onSubmit, onContinue, isCompleted, step.id, queryClient, flowId]);
+  }, [onSubmit, onContinue, isCompleted, queryClient, flowId]);
 
   const onToggle = expanded ? onCollapse : onExpand;
 
