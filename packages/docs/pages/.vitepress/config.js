@@ -78,6 +78,15 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Disqus',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/disqus/triggers' },
+            { text: 'Connection', link: '/apps/disqus/connection' },
+          ],
+        },
+        {
           text: 'Dropbox',
           collapsible: true,
           collapsed: true,
@@ -176,6 +185,16 @@ export default defineConfig({
             { text: 'Triggers', link: '/apps/google-sheets/triggers' },
             { text: 'Actions', link: '/apps/google-sheets/actions' },
             { text: 'Connection', link: '/apps/google-sheets/connection' },
+          ],
+        },
+        {
+          text: 'Google Tasks',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/google-tasks/triggers' },
+            { text: 'Actions', link: '/apps/google-tasks/actions' },
+            { text: 'Connection', link: '/apps/google-tasks/connection' },
           ],
         },
         {
@@ -458,6 +477,16 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Vtiger CRM',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/vtiger-crm/triggers' },
+            { text: 'Actions', link: '/apps/vtiger-crm/actions' },
+            { text: 'Connection', link: '/apps/vtiger-crm/connection' },
+          ],
+        },
+        {
           text: 'Webhooks',
           collapsible: true,
           collapsed: true,
@@ -482,6 +511,15 @@ export default defineConfig({
           items: [
             { text: 'Triggers', link: '/apps/xero/triggers' },
             { text: 'Connection', link: '/apps/xero/connection' },
+          ],
+        },
+        {
+          text: 'You Need A Budget',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            { text: 'Triggers', link: '/apps/you-need-a-budget/triggers' },
+            { text: 'Connection', link: '/apps/you-need-a-budget/connection' },
           ],
         },
         {
